@@ -28,3 +28,5 @@ let maximo = Math.max(5, 10, 15, 60, 8)
 
 //Mostrar en pantalla
 console.log(maximo)
+
+
