@@ -28,8 +28,3 @@ let maximo = Math.max(5, 10, 15, 60, 8)
 
 //Mostrar en pantalla
 console.log(maximo)
-
-git init
-git add *
-git commit -a -m 'Commit message'
-git remote add origin git@github.com:vhenaoi/Cruso_Platzi_JS.git
