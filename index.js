@@ -12,7 +12,7 @@ let inicial = 4 //variable local
 let final = 10 //variable local
 
 // Extraer palabra
-palabra = frase(inicial:final)
+palabra = frase.substring(inicial, final)
 
 
 //Mostrar en pantalla
