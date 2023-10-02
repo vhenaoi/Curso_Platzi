@@ -8,10 +8,27 @@ int main()
     printf("Hello, world!\n");
     return 0;
 }
+
+void main()
+{
+    /*Especifica que no hay valor disponible, se
+    usa en 3 escenarios
+            1. Función retorna tipo de datos void
+                void funtion()
+            2. Función tiene argumentos de tipo void
+                int rand(void)
+            3. Puntero o apuntador que va a la dirección en memoria 
+            de un objeto, pero no le importa el tipo de dato que 
+            tenga
+
+    */
+   return 0;
+}
+
 /*
 Basic Types:
     Aritmeticos
-    
+
     (A) Valores enteros
                     int 2 -32,768 to 32,767 
                     unsigned int 0 to 65,535  
