@@ -1,1 +1,1 @@
-alert("Hola Platzi")
+alert("Platzi")
