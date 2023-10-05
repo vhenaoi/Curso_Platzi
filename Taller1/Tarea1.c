@@ -1,3 +1,7 @@
+// TAREA 1
+// Implementa un programa en C que lea el archivo binario e imprima los nombres, 
+//edades y géneros de todos los estudiantes dentro de un rango de edades.
+
 // CORRER ESTAS LINEAS EN LA TERMINAL
 
 // gcc -Wall -Wextra -g3 -std=c99 Tarea1.c -o Tarea1.exe
