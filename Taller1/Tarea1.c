@@ -50,6 +50,11 @@ int main(int argc, char *argv[]) {
     uint32_t age_min = atoi(argv[2]);
     uint32_t age_max = atoi(argv[3]);
 
+    if (age_min >= age_max) {
+        printf("Error: age_min debe ser menor que age_max.\n");
+        return 1; // Salir del programa con un código de error
+    }
+
     FILE *file = fopen(binary_file, "rb");
     if (file == NULL) {
         printf("File '%s' does not exist.\n", binary_file);
