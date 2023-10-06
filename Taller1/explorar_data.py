@@ -17,6 +17,7 @@ def read_student_record(file):
     student_id_bytes = file.read(4)
     student_id = int.from_bytes(student_id_bytes, 'little')
     
+    
     flags_byte = file.read(1)
     flags = int.from_bytes(flags_byte, 'little')
     
@@ -75,6 +76,7 @@ def main():
             break
 
     students_in_range = []
+    course_ = []
     
     try:
         with open(binary_file, 'rb') as file:
@@ -95,11 +97,17 @@ def main():
             # Crear un DataFrame a partir de la lista de estudiantes en el rango de edad
             student_range = pd.DataFrame(students_in_range)
             # Imprimir el DataFrame completo
-            print(student_range)         
+            #print(student_range)         
             # Leer e imprimir los datos de cursos
-            #print("\nCourse:")
+            print("\nCourse:")
             for _ in range(course_count):
                 course_id, course_name, credit_hours = read_course_record(file)
+                course_data = {
+                    'ID Course': course_id,
+                    'Course name': course_name,
+                    'Credits': credit_hours
+                }
+                course_.append(student_data)
                 #print(f"ID: {course_id}, Name: {course_name}, Credit hours: {credit_hours}")
             
             # Leer e imprimir los datos de matrículas
