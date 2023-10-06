@@ -4,8 +4,8 @@
 
 // CORRER ESTAS LINEAS EN LA TERMINAL
 
-// gcc -Wall -Wextra -g3 -std=c99 Tarea2.c -o Tarea2.exe
-// ./Tarea2.exe sample_data.bin
+// gcc -Wall -Wextra -g3 -std=c99 Veronica_Henao_tarea2.c -o Veronica_Henao_tarea2.exe
+// ./Veronica_Henao_tarea2.exe sample_data.bin
 
 #include <stdio.h>
 #include <stdlib.h>
