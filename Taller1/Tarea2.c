@@ -84,8 +84,10 @@ int main(int argc, char *argv[]) {
     printf("%-40s%-10s\n", "Course Name", "Average Age");
 
     CourseAge course_ages[header.course_count]; // Arreglo para almacenar los promedios de edad por curso
+    uint32_t i;
+    uint32_t j;
 
-    for (uint32_t i = 0; i < header.course_count; i++) {
+    for (i = 0; i < header.course_count; i++) {
         CourseRecord course;
         if (readCourseRecord(file, &course) != 1) {
             printf("Error reading course record %d.\n", i);
@@ -95,7 +97,7 @@ int main(int argc, char *argv[]) {
         uint32_t total_age = 0;
         uint32_t course_student_count = 0;
 
-        for (uint32_t j = 0; j < header.enrollment_count; j++) {
+        for (j = 0; j < header.enrollment_count; j++) {
             EnrollmentRecord enrollment;
             if (readEnrollmentRecord(file, &enrollment) != 1) {
                 printf("Error reading enrollment record %d.\n", j);
@@ -119,7 +121,7 @@ int main(int argc, char *argv[]) {
     }
 
     // Imprimir la tabla de resultados
-    for (uint32_t i = 0; i < header.course_count; i++) {
+    for (i = 0; i < header.course_count; i++) {
         printf("%-40s%.2f\n", course_ages[i].name, course_ages[i].average_age);
     }
 
