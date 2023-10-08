@@ -85,7 +85,7 @@ int main(int argc, char *argv[]) {
         if (student.age >= age_min && student.age <= age_max) {
             //printf("ID: %u, Name: %s, Age: %u, Gender: %s\n", student.student_id, student.name, student.age,
                    //(student.flags & 1) == 1 ? "Female" : "Male");
-            printf("%-30s%-30u%-10s\n", student.name, student.age, (student.flags & 1) == 1 ? "Female" : "Male");
+           //printf("%-30s%-30u%-10s\n", student.name, student.age, (student.flags & 1) == 1 ? "Female" : "Male");
 
         }
     }

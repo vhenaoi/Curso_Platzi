@@ -90,17 +90,19 @@ int main(int argc, char *argv[]) {
     for (i = 0; i < header.course_count; i++) {
         CourseRecord course;
         if (readCourseRecord(file, &course) != 1) {
-            printf("Error reading course record %d.\n", i);
+            //printf("Error reading course record %d.\n", i);
             continue; // Continuar con el próximo curso
         }
 
         uint32_t total_age = 0;
         uint32_t course_student_count = 0;
+        uint32_t successful_enrollments = 0;
 
         for (j = 0; j < header.enrollment_count; j++) {
             EnrollmentRecord enrollment;
             if (readEnrollmentRecord(file, &enrollment) != 1) {
-                printf("Error reading enrollment record %d.\n", j);
+                //printf("Error reading enrollment record %d.\n", j);
+                // Aquí puedes registrar el número de registro problemático si lo deseas
                 continue; // Continuar con la próxima matrícula
             }
 
@@ -108,8 +110,12 @@ int main(int argc, char *argv[]) {
                 // Encontramos un estudiante inscrito en este curso
                 total_age += enrollment.student_age;
                 course_student_count++;
+                // Aquí puedes registrar el número de registro leído con éxito si lo deseas
+                successful_enrollments++;
             }
         }
+        // Después del bucle, muestra el número total de registros de matrícula leídos con éxito
+        printf("Total de registros de matricula leidos con exito: %u\n", successful_enrollments);
 
         // Calcular el promedio de edad solo si al menos un estudiante se inscribió en el curso
         if (course_student_count > 0) {
